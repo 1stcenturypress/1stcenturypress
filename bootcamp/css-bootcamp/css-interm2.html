@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 201 - Page 2</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1 style="text-align: center">CSS 201: Intermediate Level CSS - Page 2</h1>
+    <h2><a href="css-intermediate.html">Return To Page 1</a></h2>
+    <h2>Advanced CSS Selectors</h2>
+    <h4>We'll start with a group of boxes</h4>
+    <div id="parent">
+      <div class="box4">
+        These are all .box4 elements and considered DESCENDENT Selectors
+      </div>
+      <div class="box4">
+        Each of these have been assigned ADJACENT Selectors
+      </div>
+      <div class="box4"></div>
+      <div class="box4"></div>
+      <div class="box4"></div>
+      <div class="box4"></div>
+      <div class="box4"></div>
+    </div>
+    <div class="box4">
+      This box is also a .box4 element but is NOT formatted because its outside
+      the ID #parent
+    </div>
+    <h2>PSEUDO Selectors/Classes</h2>
+    <h3>Pseudo selectors/classes are a way to link states.</h3>
+    <h4>Building off our boxes again, ...</h4>
+    <div id="parent2">
+      <div class="box5"></div>
+      <div class="box5"></div>
+      <div class="box5 dontselectme">
+        This box was assigned a NOT selector and was ignored for the bg color
+        command
+      </div>
+      <div class="box5"></div>
+      <div class="box5">
+        SELECT ME! -- It was selected by using .BOX5:NTH-CHILD(5) in CSS
+      </div>
+      <div class="box5"></div>
+    </div>
+    <h3>HOVER</h3>
+    <h4>
+      Notice that hovering over the above boxes, the background shifts colors.
+      This is a Pseudo Selector.
+    </h4>
+    <h2>PSEUDO ELEMENTS</h2>
+    <h3>
+      Pseudo Elements are similar to Pseudo Selectors/Classes. With Pseudo
+      Elements, CSS steps into the world of HTML coding. Again, we use our boxes
+      below to demonstrate.
+    </h3>
+
+    <h3>::BEFORE and ::AFTER</h3>
+    <h4>Behaves like inline HTML.</h4>
+    <div class="box6"></div>
+    <h4>
+      The BEFORE gets assigned red border, AFTER gets the yellow border, and the
+      default box gets the solid blue. We have shifted the BEFORE to -30px for
+      TOP/LEFT and the AFTER to -30px BOTTOM/RIGHT. The layer effect comes from
+      applying a Z-INDEX of -1 to BEFORE and 1 to AFTER. (This leaves the
+      default box at 0 or between them).
+    </h4>
+    <hr />
+    <h3>REAL WORLD Example</h3>
+    <h4>
+      Say we want to apply an effect to a hyperlink, like in the following text.
+      We want a border that impersonates an underline for the link and then to
+      highlight the link when hovered over.
+    </h4>
+    <h4 id="pseudoHover">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      <a href="#">I have a border (hover over me for a highlight).</a>
+      Perspiciatis animi aliquam, qui quasi porro velit non eveniet, ipsam
+      cupiditate ipsa ea magnam facilis pariatur tenetur repudiandae magni
+      consequuntur repellat repellendus!
+    </h4>
+    <h4>
+      This is accomplished through CSS assignment of conditions to the A HREF
+      and the HOVER elements, through RELATIVE/ABSOLUTE positioning, and use of
+      the Z-INDEX for layering.
+    </h4>
+    <h3>Targeting First Letter / First Line Of Elements</h3>
+    <h4 id="firstLtr">
+      Say we want to enlarge the first letter of a paragraph/article/post, etc.
+      You just create a style element for the block of text using ::first-letter
+      and give it specified font atrributes like size or weight and float it to
+      the left to allow for multi-line wrap. Like we just did for this
+      paragraph.
+    </h4>
+    <h4 id="firstLine">
+      Or perhaps we want to change the attributes of the first line of a block
+      of text, such as this one. We can simply create a style element for the
+      block using ::first-line. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Aspernatur officia architecto aperiam dignissimos culpa
+      consectetur blanditiis. Maxime voluptatem sit est, eveniet totam adipisci
+      neque id? Eaque maxime possimus eius omnis.
+    </h4>
+    <h3>USER SELECTION Customization</h3>
+    <h4>
+      You can control the formatting of a user-selected text on your page. This
+      is when a user "highlights" a portion of the text on the page for
+      temporary focus. This is simply done in CSS with ::SELECTION (does not
+      require a host element) and the attributes you want changed. Go ahead.
+      Select some text in this paragraph (or anywhere on this page) to test it
+      out. I have set the selection to aquamarine background with black text.
+    </h4>
+    <h3>TRANSITIONS</h3>
+    <h4>
+      A smooth transition from activity to activity can really add a
+      professional environment to your page/site.
+    </h4>
+    <a href="#" class="button">Click Me</a>
+    <h4>
+      We can add TRANSITION: ALL 0.2S to have a slower switch for the HOVER
+      we've added to the hyperlink. (Could also just assign the transition to
+      background-color and/or color instead of ALL)
+    </h4>
+    <h2><a href="css-interm3.html">Continue On Page 3</a></h2>
+  </body>
+</html>

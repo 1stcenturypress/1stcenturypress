@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML 201 Plus</title>
+    <link rel="stylesheet" href="style2.css">
+ 
+  </head>
+  <body>
+    <h1 id="top">Welcome To HTML 201 and More</h1>
+    <div>
+      <a href="#bottom">Jump to bottom</a>
+    </div>
+    <p>You can simply type lorem + enter and auto-gen LOREM text blocks</p>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, eligendi
+      ducimus magni velit mollitia doloremque! Laboriosam inventore doloribus
+      provident nesciunt, natus porro necessitatibus. Illum repellendus magni
+      quisquam aut laborum recusandae!
+    </p>
+    <!-- <img id="box" src="1cp_logo.png" alt="1CP"> -->
+    <p></p>
+
+    <table border="1" width="100%">
+      <th colspan="3">Table Header with colspan x3</th>
+      <tr>
+        <td rowspan="2" width="33%">Row1Col1 rowspan x2<br>with width @ 33%</td>
+        <td colspan="2">Row1Col2 colspan x2</td>
+        
+      </tr>
+      <tr>
+        <td>Row2Col2</td>
+        <td>Row2Col3</td>
+      </tr>
+    </table>
+<br>
+<style>
+  .styleExample {
+    padding: 40px; color: white; background-color: black;
+  }
+  .upperCase {
+    padding: 40px;
+    text-transform: uppercase;
+    }
+    #uglyBorder {
+      border: 15px solid red;}
+    .formGuide {
+      padding: 10px;
+      border-color:seagreen;
+      border-style: dotted;
+      border-radius: 10px;
+      background-color: springgreen; 
+      color: #000;
+    }
+</style>
+<h3>Combining CSS classes with HTML div blocks</h3>
+<h4>.styleExample = padding / color / background</h4>
+    <div class="styleExample"> 
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quis dignissimos unde eveniet aliquam consequuntur qui, numquam repudiandae assumenda quas commodi reiciendis deleniti voluptatibus odio ullam dolorum. At, ipsum deserunt?
+    </div>
+    <h4>.upperCase = padding / upper case + #uglyBorder id</h4>
+    <div class="upperCase" id="uglyBorder">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur cupiditate adipisci harum, assumenda cumque, maiores, quibusdam quia aspernatur vel ipsum suscipit! Similique officia quis dolorum? Atque quos dolorem laudantium delectus.</div>
+    <h4>and with both classes combined</h4>
+    <div class="styleExample upperCase">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt eius, reiciendis exercitationem numquam unde velit voluptatibus. Dicta ipsam suscipit omnis quasi commodi quidem nihil ipsa repellat obcaecati? Nulla, vel laudantium?</div>
+
+  <br><br>
+
+<h3>Format Code</h3>
+<p>PRE tags are block element</p>
+<pre>
+  Some PRE text examples
+    Indented text is recognized as well
+    PRE tag cares about white space and returns
+</pre>
+<p>
+  But CODE tags are inline element and ignore extra white space and returns<br>
+  <code>This is CODE text 
+    with a return after    the word 'text' and extra spaces after 'after'</code> 
+</p>
+<h3>How To Display Code Elements in HTML</h3>
+<p>Traditional HTML symbols like &lt; (less-than) and &gt; (greater-than) must be replaced with code shortcuts which start with & and end with ;</p>For example, &lt; is produced by combining <b>& + lt + ;</b> and &gt; by combining <b>& + gt + ;</b></p>
+    <h3>Deprecated Code</h3>
+    <p>
+      Some coding is being replaced with CSS code instead of standard HTML.
+      <br /><p>For example, underline &lt;u&gt;  is now &lt;span style='text-decoration:underline'&gt;
+      </p>
+    </p>
+
+    <h3>FORMS - An Introduction</h3>
+    <p>
+    <form action="" method="get"
+     class="formGuide">
+     <div>
+       <input required name="password" type="text" value="" placeholder="Enter Your Name"><p>
+     </div>
+     <div>
+       <textarea required name="address" cols="50" rows="5" placeholder='Enter text here...'></textarea><p>
+     </div>
+     <div>
+       <select name="selected_option">
+         <option value="" selected">Select A Value</option>
+         <option value="value1">Value 1</option>
+         <option value="value2">Value 2</option>
+         <option value="value3" disabled="disabled">Value 3</option>
+
+       </select>
+     </div>
+     <div>
+      <button type="reset">Reset</button>
+      <button type="submit">Submit</button>
+     </div>
+    </form></p>
+
+
+    <h3>Embedding Videos</h3>
+    <p>Forget the old days of RealPlayer&trade; and Flash... one line of iframe code embeds your videos... </p>
+    <iframe src="https://rumble.com/embed/vlthat/?pub=4" frameborder="0" height="360" width="540px" ></iframe>
+
+    <h3>An Anchor-Like Return To Top</h3>
+    <!-- Create an anchor at the bottom of the page to link back to the top of the page -->
+    <div id="bottom">
+      <a href="#top">Back to top</a>
+      &copy; 2022 1CP Development
+    </div>
+  </body>
+</html>

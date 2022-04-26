@@ -1,0 +1,88 @@
+body {
+  background-color: white;
+  color: black;
+  background-image: url("../images/stormysky01.jpg");
+  /* display: inline-block; */
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: auto auto auto; /* 3 columns */
+  /* column-gap: 1px;
+  row-gap: 1px; */
+}
+.item {
+  border: 1px solid black;
+}
+
+.item1 {
+  padding: 10px;
+  text-align: center;
+  font-size: 32px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  border-radius: 5px;
+  border-bottom: 5px solid black;
+  background-color: antiquewhite;
+  color: green;
+}
+.item1,
+.item7 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.item4,
+.item5 {
+  padding: 10px;
+  text-align: left;
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  border-radius: 10px;
+  border-top: 5px solid black;
+  background-color: white;
+  color: black;
+}
+
+.item6 {
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+.item4,
+.item5 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  min-width: 100%;
+  max-width: 100%;
+}
+.item6 {
+  padding: 5px;
+  text-align: left;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  border-right: 5px solid black;
+  background-color: green;
+  color: white;
+  min-width: 100%;
+}
+.item7 {
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  border-radius: 5px;
+  border-top: 5px solid black;
+  background-color: antiquewhite;
+  color: green;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 201 - Grid</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      #grid {
+        display: grid;
+        grid-template-columns: auto auto auto; /* 3 columns */
+        column-gap: 20px;
+        row-gap: 20px;
+      }
+      .item {
+        border: 1px solid blue;
+      }
+      .item1,
+      .item7 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+      }
+      .item6 {
+        grid-row-start: 2;
+        grid-row-end: 4;
+      }
+      .item4,
+      .item5 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS 201 - GRID</h1>
+    <h2>
+      As great as FLEXBOX is over TABLE, GRID takes the layout game up a notch
+      from Flexbox.
+    </h2>
+    <h4>
+      NOTE: We have added BOX-SIZING: BORDER-BOX; to the page STYLE to best use
+      the layout features of these advanced CSS formats.
+    </h4>
+    <h3>
+      While Flexbox is great for vertically aligned layouts (if you think about
+      it its mostly a stacked format), Grid is designed for a template layout.
+    </h3>
+    <h2>COLUMNS, ROWS, and GUTTERS (GAPS)</h2>
+    <h4>
+      We start with a container element called #grid containing a 3 x 3 grid (9
+      boxes originally)
+    </h4>
+    <div id="grid">
+      <div class="item item1">1</div>
+      <div class="item item4">4</div>
+      <div class="item item5">5</div>
+      <div class="item item6">6</div>
+      <div class="item item7">7</div>
+    </div>
+    <h4>
+      Let's break down the process of creating the above grid layout: Item1 and
+      Item7 are both a GRID-COLUMN-START:1 and GRID-COLUMN-END:4. This means
+      Item1 "consumes" the space of columns 1 through 3 of the 1st row, Item7
+      consumes columns 1 to 3 of the 4th row.
+    </h4>
+    <h4>
+      Item4 and Item5 both consume columns 2 through 3 of the 2nd and 3rd row
+      respectively, using GRID-COLUMN-START:2 and GRID-COLUMN-END:4.
+    </h4>
+    <h4>
+      And Item6 consumes the rows 2 through 3 of the 1st column using
+      GRID-ROW-START:2 and GRID-ROW-END:4.
+    </h4>
+    <h2><a href="css-interm3.html">Return To Page 3</a></h2>
+  </body>
+</html>

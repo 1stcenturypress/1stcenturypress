@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 301 - Responsive Sites</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style></style>
+  </head>
+  <body>
+    <h1>CSS 301 - Responsive Sites</h1>
+    <h2>VIEWPORT Meta Element</h2>
+    <h3>
+      VSCode will automatically insert the necessary head, title, body, and meta
+      tags needs for a clean start for a page -- at least when you use the
+      shortcuts for this: <br /><code>HTML:5 + ENTER</code> or
+      <code>! + ENTER</code>.
+    </h3>
+    <h3>
+      However, if you are manually adding these basic structures, its the META
+      tag content that we are focusing on here and you must be certain to
+      include in all your pages.
+      <p>
+        Instruct the browser that this page will be responsive to the various
+        device screen types by adding:
+        <code
+          >META NAME="VIEWPORT" CONTENT="WIDTH=DEVICE-WIDTH,
+          INITIAL-SCALE=1.0"</code
+        >
+      </p>
+    </h3>
+    <h4>
+      [Note: the <code>META CHARSET='UTF-8"</code> is what instructs the browser
+      to use the latest character sets, including emojis.]
+    </h4>
+    <h2>Responsive Embeds</h2>
+    <h3>
+      Auto-adjusting a video or image to fit proportionately within your page on
+      any device can require some CSS tweaking.
+    </h3>
+    <h4>
+      We create a .CONTAINER class {} with POSITION: RELATIVE, OVERFLOW: HIDDEN,
+      with WIDTH:100% and PADDING-TOP:56.25% (which is 9 / 16 * 100 for 16x9
+      ratio).
+    </h4>
+    <h4>
+      Then assign .CONTAINER IFRAME {} to have POSITION: ABSOLUTE with TOP:
+      ,RIGHT: ,BOTTOM: and LEFT: set at 0 and WIDTH and HEIGHT set to 100%.
+    </h4>
+
+    <h4>
+      Inside the DIV we call the 'container' class and insert the IFRAME content
+      from the video.
+    </h4>
+    <div class="videoContainer">
+      <iframe
+        class="rumble"
+        width="640"
+        height="360"
+        src="https://rumble.com/embed/vklex5/?pub=4"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <h3>
+      And you should be seeing the video fill 100% width on any device at any
+      resolution.
+    </h3>
+    <h2>Last Responsive Layout Example</h2>
+    <h3>
+      For this final example in our CSS 301 ----><a href="css-301-2.html"
+        >See Responsive Page 2</a
+      >
+    </h3>
+  </body>
+</html>

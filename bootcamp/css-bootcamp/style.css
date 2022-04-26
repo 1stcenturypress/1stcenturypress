@@ -1,0 +1,75 @@
+/* Instead of inline or <style></style> methods for implementing */
+body {
+  background-color: black;
+  color: antiquewhite;
+}
+/* COMMENT indicator in CSS */
+h4 {
+  color: rgba(255, 255, 4);
+  font-size: 24px;
+}
+a {
+  color: antiquewhite;
+}
+a:hover {
+  color: blue;
+}
+a:active {
+  color: rgb(42, 165, 48);
+}
+a:visited {
+  color: rgb(248, 103, 50);
+}
+
+body {
+  background-image: url("images/stormysky01.jpg");
+  background-size: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+div.whitebg {
+  background-color: white;
+  color: black;
+  padding: 5px;
+}
+
+div.fairPlay {
+  display: inline-block;
+  border: 5px;
+  border-style: groove;
+  border-color: blue;
+  width: 150px;
+  height: 150px;
+}
+div.subordinatePlay {
+  display: inline;
+  border: 5px;
+  border-style: groove;
+  border-color: aqua;
+  width: 150px;
+  height: 150px;
+}
+div.standard {
+  border: 5px;
+  border-style: groove;
+  border-color: white;
+  height: 150px;
+  width: 150px;
+}
+
+#box {
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  /* background-image: url("images/stormysky01.jpg"); */
+  background-position: center center;
+  background-size: cover;
+  border-radius: 50% 50% 50% 50%;
+  box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.75);
+}
+.semitransparent {
+  background-color: rgba(54, 52, 46, 0.25);
+  padding-left: 5px;
+  padding-right: 5px;
+}

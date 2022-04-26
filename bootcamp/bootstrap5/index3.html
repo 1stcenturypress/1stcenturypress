@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <title>Bootstrap 101 - Continued</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Bootstrap 101 - Continued</h1>
+    <h2>A Walkthrough of the Documentation - Part 3</h2>
+    <p>
+      See full documentation on
+      <a href="https://getbootstrap.com" target="_blank">getbootstrap.com</a>
+    </p>
+
+    <h4>Shadows</h4>
+    <p>
+      Shadows are either <code>shadow-none</code>, <code>shadow-sm</code>,
+      <code>shadow</code>, or <code>shadow-lg</code>
+    </p>
+    <div class="shadow-none p-3 mb-5 bg-primary rounded">No shadow</div>
+    <div class="shadow-sm p-3 mb-5 bg-primary rounded">Small shadow</div>
+    <div class="shadow p-3 mb-5 bg-primary rounded">Regular shadow</div>
+    <div class="shadow-lg p-3 mb-5 bg-primary rounded">Larger shadow</div>
+    <p></p>
+    <h4>Containers</h4>
+    <p>
+      Containers are the essential Bootstrap building blocks. Consider them to
+      be the modern replacement of tables. but far more dynamic and responsive.
+      The basic concept is to treat each container as if it consists of 12
+      blocks.
+    </p>
+    <p>
+      Here's a standard, evenly balanced container of 3 "columns", each
+      consuming 4 of the 12 blocks.
+    </p>
+    <div class="container">
+      <div class="row">
+        <div class="col bg-primary rounded-1 m-1">Column 1</div>
+        <div class="col bg-primary rounded-1 m-1">Column 2</div>
+        <div class="col bg-primary rounded-1 m-1">Column 3</div>
+      </div>
+    </div>
+    <p></p>
+    <p>
+      Here we've defined the middle "column" to consume 6 of the 12 blocks. The
+      first and third will equally share the remaining 6 blocks.
+    </p>
+    <div class="container">
+      <div class="row">
+        <div class="col bg-primary rounded-1 m-1">Column 1</div>
+        <div class="col-6 bg-primary rounded-1 m-1">
+          Column 2 <code>col-6</code>
+        </div>
+        <div class="col bg-primary rounded-1 m-1">Column 3</div>
+      </div>
+    </div>
+    <p></p>
+    <p>
+      Here we've defined the first "column" to consume 7 of the 12 blocks. The
+      second 3 blocks and third 2 blocks. For responsive design, we have
+      indicated <code>col-md-x</code> for each. When the site drops below medium
+      size, the columns convert to separate full rows.
+    </p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 border p-2">
+          <code>col-md-7</code>
+        </div>
+        <div class="col-md-3 border p-2">
+          <code>col-md-3</code>
+        </div>
+        <div class="col-md-2 border p-2">
+          <code>col-md-2</code>
+        </div>
+      </div>
+    </div>
+
+    <!-- <h2><a href="index4.html">Continue to page 4....</a></h2> -->
+    <h3><a href="index2.html">Return to page 2</a></h3>
+    <h4><a href="index.html">Return to page 1</a></h4>
+
+    <footer>&copy; 2022 1st Century Design Group</footer>
+    <!-- Bootstrap JS scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+    <!-- External JS script -->
+    <style src="js/script.js"></style>
+  </body>
+</html>

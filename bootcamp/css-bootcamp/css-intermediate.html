@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 201</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1 style="text-align: center">CSS 201: Intermediate Level CSS</h1>
+    <h2>The DISPLAY Property</h2>
+    <h3>
+      We've been introduced to 3 display types so far... inline, block, and
+      inline-block
+    </h3>
+    <h4>Standard BLOCK Display</h4>
+    <div class="standardBlock">This is the first</div>
+    <div class="standardBlock">This is the second</div>
+    <div class="standardBlock">This is the third</div>
+
+    <h4>Standard INLINE Display</h4>
+    <div class="standardInline">This is the first</div>
+    <div class="standardInline">This is the second</div>
+    <div class="standardInline">This is the third</div>
+    <h4>Standard INLINE-BLOCK Display</h4>
+    <div class="standardInlineBlock">This is the first</div>
+    <div class="standardInlineBlock">This is the second</div>
+    <div class="standardInlineBlock">This is the third</div>
+    <h4>** Notice the additional margin above and below both block displays</h4>
+    <h3>Adding the BOX Model</h3>
+    <h4>Let's say we want to create a 300 x 300 px box...</h4>
+    <div class="box">
+      Box with 5px border and 10px padding (which uses the default CONTENT-BOX
+      settings) actually making it 330px wide
+    </div>
+    <h4>
+      By default, this 300 x 300px box would actually take up more than 300px
+      when we add the border and padding (5px border + 10px padding + 300px
+      interior = 330px)
+    </h4>
+    <h4>But with BOX-SIZING we can limit the total px width to the 300px</h4>
+    <div class="boxSized">
+      Box with 5px border and 10px padding PLUS box-sizing set to BORDER-BOX and
+      actually measuring the 300px width
+    </div>
+    <h4>
+      The total interior width is 270px (300px - 5px border - 10px padding)
+    </h4>
+    <h3>OUTLINES - the other type of border</h3>
+    <div class="outlineExample">
+      Here's a box with the outline defined in blue. It is exterior to all the
+      box elements: border, margin, padding, etc. like a border around the
+      border(s). It has also been given a 5px offset here.
+    </div>
+    <h4>
+      OUTLINES are not calculated in the coding; will not even appear in the
+      inspection box! But it obviously still takes up space on the display.
+    </h4>
+    <h3>TEXT SHADOW</h3>
+    <h4>
+      We can add a shadow effect to text just like boxes (except for the inner
+      shadow option)
+    </h4>
+    <div class="boxShadowText">Testing the shadow text FX</div>
+    <h3>Forcing MIN WIDTH On An Element</h3>
+    <div class="box2">
+      This is an element given a minimum width of 450px and max width of 500px
+      so that it will take up the min width (even with no characters) and then
+      wrap the text after reaching that max.
+    </div>
+
+    <h3>CSS POSITIONING</h3>
+    <h4>
+      We will redirect the following positioning types to their own pages for
+      examples
+    </h4>
+    <ul class="inlineLinks">
+      <div><a href="relative.html">.relative</a></div>
+      <div><a href="absolute.html">.absolute</a></div>
+      <div><a href="fixed.html">.fixed</a></div>
+      <div><a href="sticky.html">.sticky</a></div>
+    </ul>
+    <h3>OVERFLOW For Boxed Content</h3>
+    <h4>
+      When the content you assign into a boxed area overflows, you can insert
+      OVERFLOW: and its various options such as HIDDEN, SCROLL, VISIBLE, and
+      AUTO (recommended).
+    </h4>
+    <div class="box" style="overflow: auto">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum dolore,
+      officia eaque odio impedit alias inventore tenetur magnam nostrum,
+      possimus ad reprehenderit consequuntur et vero porro accusantium numquam
+      incidunt distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing
+      elit. Rerum dolore, officia eaque odio impedit alias inventore tenetur
+      magnam nostrum, possimus ad reprehenderit consequuntur et vero porro
+      accusantium numquam incidunt distinctio. Lorem ipsum dolor sit amet,
+      consectetur adipisicing elit. Rerum dolore, officia eaque odio impedit
+      alias inventore tenetur magnam nostrum, possimus ad reprehenderit
+      consequuntur et vero porro accusantium numquam incidunt distinctio. Lorem
+      ipsum dolor sit amet, consectetur adipisicing elit. Rerum dolore, Lorem
+      ipsum dolor sit amet, consectetur adipisicing elit. Rerum dolore, officia
+      eaque odio impedit alias inventore tenetur magnam nostrum, possimus ad
+      reprehenderit consequuntur et vero porro accusantium numquam incidunt
+      distinctio.
+    </div>
+    <h4>
+      SCROLL produces both vertical and horizontal scrolling bars while AUTO
+      only produces vertical. CLIP and HIDDEN hide the overflow and VISIBLE
+      allows the overflow to bleed through the box.
+    </h4>
+    <h3>Centering Block Elements</h3>
+    <h4>
+      Centered Block Elements by applying MARGIN-LEFT: AUTO and MARGIN-RIGHT:
+      AUTO
+    </h4>
+    <div class="box3">
+      A centered box element using AUTO for MARGIN-LEFT and MARGIN-RIGHT or
+      MARGIN: 50px AUTO to create an min margin of 50px on all sides plus
+      centered on line
+    </div>
+    <h2><a href="css-interm2.html">Continue On Page 2</a></h2>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+* {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+body {
+  background-image: url("https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-13.jpg");
+  background-size: auto;
+}
+
+#head {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#title {
+  display: inline-block;
+  font-weight: normal;
+  margin-top: 2px;
+  font-size: 42px;
+  border-bottom: 2px solid rgb(152, 3, 3);
+  padding-bottom: 5px;
+  width: 450px;
+  color: rgb(255, 0, 0);
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+  margin-bottom: 50px;
+}
+
+#btn {
+  font-weight: normal;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 40px;
+  transition: padding 0.2s;
+}
+
+#btn:hover {
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 10px black;
+  background-color: rgb(255, 0, 0);
+  padding: 12px 45px;
+  transition: padding 0.2s;
+}
+
+#info {
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 15px black;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+table,
+td,
+th {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+table {
+  margin: 10px auto;
+  background-color: rgba(255, 198, 198, 0.25);
+}
+
+th {
+  letter-spacing: 2px;
+  font-size: 28px;
+  padding: 10px 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+td {
+  font-size: 25px;
+  padding: 10px 20px;
+  text-align: center;
+  height: 150px;
+}
+
+#name_titl {
+  width: 30%;
+}
+
+#gender_titl {
+  width: 20%;
+}
+
+#birth_titl {
+  width: 20%;
+}
+
+#home_titl {
+  width: 50%;
+}

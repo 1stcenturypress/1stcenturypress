@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <title>React.js 101</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1 id="header">React.js 101</h1>
+    <h2>What is React.js?</h2>
+    <p>
+      On a simplistic level, its a JavaScript library for building user
+      interfaces (UIs). But React.js is actually a way to turn your app or site
+      into reactive/responsive design, which HTML, CSS, and JS can't do.
+    </p>
+    <p>
+      With React.js, we are back in the world of programming languages. This is
+      not HTML or CSS/Bootstrap, which are basically just display languages.
+      React is more of a hybrid version of JS programming.
+    </p>
+    <h4>Install Node and NPM</h4>
+    <p>
+      We are running NodeJS version 16.14.2 LTS (Long Term Support) and NPM
+      version 8.5.4.
+    </p>
+    <h4>Starting A Project</h4>
+    <p>In Terminal, we take various steps to create a new React.js app.</p>
+    <code> npm install -g create-new-app</code> does a global install
+    <p>Then we need a new app in our VS Code explorer:</p>
+    <code> npx create-react-app my-app</code> which will take a few minutes and perform many actions:
+    <p>
+      <ul><li>installs the new my-app folder in VS Code explorer, with various folders such as node_modules, public, and src plus other files.</li>
+        <li>
+          initializes a git repository
+        </li>
+        <li>installs template dependencies</li>
+        <li>creates a git commit</li>
+      </ul>
+    </p>
+    <p>When finished, it will present a short list of actions you can take, such as:</p>
+    <p>
+      <ul>
+
+        <li>
+          <code>npm start</code> ---- starts the developer server
+        </li>
+        <li><code>npm run build</code> ---- bundles the app into static files for production </li>
+        <li><code>npm test</code> ---- starts the test runner</li>
+        <li><code>npm run eject</code> ---- removes the tool and copies the build dependencies, configuration files and scripts into the app directory (and reminds us that this cannot be undone)</li>
+      </ul>
+    </p>
+    <p>Then it prompts you with a suggested starting point: <code> cd my-app</code> which makes certain you are in the my-app folder directory in the Terminal and <code> npm start</code> which actually starts the app development.</p>
+    <p>Use both of those suggestions. The first will simply change the directory at your prompt cursor. The second will actually build the React app and automatically launch it in your browser, where you will see a rotating React logo, a reminder to "Edit src/App.js and save to reload", and a link to Learn React from their website.
+    </p>
+    <p>In the Terminal, you get a listing of the Local (http://localhost:3000) and network (http://192.168.1.100:3000) addresses for the app, and a reminder to create a production build by entering <code>npm run build</code>.</p>
+    <h4>Inside the JSX language</h4>
+    <p>In VS Code we can open files like src/App.js and find that they include commands like IMPORT, function blocks, and even HTML like DIV, HEADER, IMG, P, A, etc. React.js uses its own language, JSX, which is a strange mixture of HTML, CSS, JS, etc. with a few alternate conventions.</p>
+    <p>For instance, <code>class=</code> becomes <code>className=</code>.</p>
+    <h5>Components</h5>
+    <p>First, in App.js we add <code>import React from 'react';</code> to the top, which allows us to use React in the page.</p>
+    <p>Then we can create a component (above the function App() block).</p>
+    <code>
+      class Item extends React.Component {<br>
+        render() {<br>
+          return &lt;h1>Hello React.js World&lt;/h1><br>
+        }
+      }
+    </code>
+    <p>And we can invoke it in the body of the function with a simple <code>&lt;Item /></code>, freeing us to change the content in the component-side without touching the function again.
+    </p>
+    <p>BUT,... we can take it further and house the entire component in its own file (like Classes and Methods are frequently done) and then IMPORT them into the App.js.</p>
+    <p>If we do this, a few changes must be made. In the new src/MyItem.js (where the component is moved), we add the <code>import React from 'react';</code> command (remove it from the App.js since it is no longer needed there).</p> Then below the component block, we must add <code>export default Item;</code> to make it accessible to other files.
+    <p>Back in the origtinal file (App.js) we add <code>import Item from './MyItem';</code> and everything should perform as it did before the component was moved.</p>
+    <p>The Component is now free-standing and can be manipulated as needed without touching the App.js file. Again, this is just like creating separate Class files and invoking them in other files, allowing for single modifications that dynamically update everywhere else.</p>
+    <h2>My-App</h2>
+    <h3>See the my-app files for details on the remainder of the React 101 section.</h3>
+    <h4>React 201 will be in the moviebrowser files.</h4>
+    <hr>
+
+    <!-- jQuery scripts Start -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        //   jQuery code here...
+      });
+    </script>
+    <!-- jQuerty scripts End -->
+
+    <!-- Bootstrap JS scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Confirmation that all CDN scripts are loaded -->
+    <script>
+      $(document).ready(function () {
+        console.log("CDN scripts are loaded!");
+      });
+    </script>
+
+    <!-- External JS script -->
+    <style src="js/script.js"></style>
+  </body>
+</html>

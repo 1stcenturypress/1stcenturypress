@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 201 - Flexbox</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      #container {
+        display: flex;
+        flex-wrap: wrap; /* if content exceeds flex-basis, wrap it */
+      }
+      #container div {
+        border: 1px solid red;
+        flex-basis: 50%; /* replaces width */
+        flex-shrink: 0; /* can not decrease */
+        flex-grow: 0; /* can not increase */
+      }
+
+      #container2 {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      #container2 div {
+        /* border: 1px solid red; */
+        padding: 5px;
+      }
+      .navigation {
+        flex-basis: 20%;
+        flex-grow: 0;
+        flex-shrink: 1;
+        padding: 5px;
+        text-align: left;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        border-radius: 5px;
+        border-right: 5px solid black;
+        background-color: green;
+        color: white;
+      }
+      .content {
+        flex-basis: 80%;
+        flex-grow: 1;
+        flex-shrink: 0;
+        padding: 5px;
+        text-align: left;
+        font-family: "Times New Roman", Times, serif;
+        border-radius: 5px;
+        background-color: white;
+        color: black;
+      }
+      .header {
+        flex-basis: 100%;
+        flex-grow: 0;
+        flex-shrink: 0;
+        padding: 10px;
+        text-align: center;
+        font-size: 32px;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        border-radius: 5px;
+        border-bottom: 5px solid black;
+        background-color: antiquewhite;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS 201 - FLEXBOX</h1>
+    <h2>
+      Tables were the go-to for page layouts a few years ago. Flexbox should
+      replace your use of tables for anything except an actual table.
+    </h2>
+    <h3>
+      The following example shows a parent DIV (with an ID set in CSS)
+      containing (3) child DIV blocks. Because the parent DIV is defined by
+      FLEX-BASIS: 50%;, each child DIV takes up 50%. The third child DIV wraps
+      down due to the FLEX-WRAP: WRAP; in the parent DIV -- otherwise it would
+      just expand the line width to 150%.
+    </h3>
+    <div id="container">
+      <div>Left</div>
+      <div>Center</div>
+      <div>Right</div>
+    </div>
+    <h3>
+      NOTE: The entire page has been set to BOX-SIZING: BORDER-BOX in the CSS to
+      allow for the Left and Center to include their border size as part of
+      their total width. (Each DIV would technically be over 50% otherwise, due
+      to their 1px borders.)
+    </h3>
+    <h3>
+      You should already see where this structure will allow for easier and more
+      flexible layout options than a table.
+    </h3>
+    <h3>
+      Take the following, for example. We create a parent DIV for the DISPLAY
+      and FLEX-WRAP settings with 2 child DIVs. We setup a NAVIGATION class and
+      a CONTENT class respectively, each with their own FLEX-BASIS:, one set at
+      20%, the other at 80%. And the Header is simply a third child DIV set to
+      FLEX-BASIS: 100% with 0 grow/shrink.
+    </h3>
+    <h3>
+      Add a few additional adjustments for colors, fonts, etc. and we have the
+      makings of a decent layout...without tables!
+    </h3>
+    <div id="container2">
+      <div class="header">Our Blogosphere</div>
+      <div class="navigation">Navigation</div>
+      <div class="content">
+        <h1>Welcome To Our Blog</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+          error mollitia delectus rem tenetur itaque dolor enim est, earum a
+          inventore animi dignissimos dolore, deserunt libero voluptate vero.
+          Aliquid, aliquam? Lorem ipsum dolor sit amet consectetur, adipisicing
+          elit. Quod eveniet suscipit rerum debitis error culpa voluptatibus
+          asperiores minus ullam, obcaecati velit recusandae odio vero illum
+          nesciunt, qui fugit quisquam expedita!
+        </p>
+      </div>
+    </div>
+    <h2><a href="css-interm3.html">Return To Page 3</a></h2>
+  </body>
+</html>

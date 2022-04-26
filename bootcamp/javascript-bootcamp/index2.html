@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript 101 - Fundamentals - Part 2</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>JavaScript 101 - Fundamentals - Part 2</h1>
+    <h3><a href="index.html">Retun to Part 1</a></h3>
+    <h2>Selecting Multiple DOM Nodes</h2>
+    <h3>
+      We start out with 4 identical DIVs with the same CLASS assigned
+      (.this-class).
+    </h3>
+    <div class="this-class">This is a class 1</div>
+    <div class="this-class">This is a class 2</div>
+    <div class="this-class">This is a class 3</div>
+    <div class="this-class">This is a class 4</div>
+    <h3>
+      In JS, we create a new variable:
+      <p>
+        <code
+          >const elems = document.querySelector(".this-class");<br />console.log(elems.innerText);
+        </code>
+      </p>
+      <p>
+        This will initially only return the first DIV: 'This is a class 1', not
+        all 4 DIVs.
+      </p>
+      <p>If we change the JS to read:</p>
+      <code
+        >const elems = document.querySelectorAll(".this-class");<br />
+        console.log(elems);
+      </code>
+      <p>We get a NodeList containing each DIV as an array item:</p>
+    </h3>  
+      NodeList(4) [div.this-class, div.this-class, div.this-class,
+    div.this-class]
+
+      <h3>What we can do with this, we will dive into later.</h3>
+    </h3>
+    <h3>
+      Another Example
+      <p>Let's build an ordered list which resembles this...</p>
+      <p>1. This is One<br>
+      2. This is Two<br>
+      3. This is Three</p>
+      <p>Then in JS code this...</p>
+      <code>
+        const elements = document.querySelectorAll("li");<br>
+        elements.forEach((node) => {
+          node.innerText = "This is CHANGED!";
+        });
+      </code>
+      <p>We query for ALL the LI elements on the page, and loop through them with a forEach, changing the innerText as we find them. And we end up with 3 changed list items...</pWe>
+      <ol>
+        <li>This is One</li>
+        <li>This is Two</li>
+        <li>This is Three</li>
+      </ol>
+    </h3>
+    <h2><a href="index3.html">Move on to JavaScript 201</a></h2>
+
+    <!-- <h2> <a href="index3.html">Continue to Part 3</a></h2> -->
+    <!-- Place SCRIPT for JS at bottom of BODY -->
+    <script src="js/javascript2.js"></script>
+  </body>
+</html>

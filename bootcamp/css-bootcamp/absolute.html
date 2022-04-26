@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 201 - ABSOLUTE Positioning</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>CSS 201 - ABSOLUTE Positioning</h1>
+    <h4
+      style="
+        border: 5px;
+        background-color: silver;
+        display: inline;
+        padding: 5px;
+        border-radius: 5px;
+      "
+    >
+      <a href="css-intermediate.html">Return To CSS 201 Main</a>
+    </h4>
+    <h2>
+      To demonstrate absolute positioning, we will need to first create a parent
+      box set to relative positioning. Absolute positioning only works when
+      incorporated with a relative-positioned element.
+    </h2>
+    <h4>
+      We start with our "parent" box set to RELATIVE and add a child box inside
+    </h4>
+    <div class="boxR">
+      <div class="boxA1">Child 1: Top Right</div>
+    </div>
+    <h4>
+      Without having set the parent box to relative, the child box would appear
+      at the top right of the ENTIRE PAGE rather than in the defined structure
+      of the parent box!
+    </h4>
+    <h3>
+      SO, ... an absolute position must be contained within a relative position
+      in order to give it an "environment" to be absolute in.
+    </h3>
+    <hr />
+    <ul class="inlineLinks">
+      <div><a href="relative.html">.relative</a></div>
+      <div><a href="absolute.html">.absolute</a></div>
+      <div><a href="fixed.html">.fixed</a></div>
+      <div><a href="sticky.html">.sticky</a></div>
+    </ul>
+  </body>
+</html>

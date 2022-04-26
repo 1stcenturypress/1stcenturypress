@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Introduction</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- HEADER method for implementing CSS 
+    <style>
+      body {
+        background-color: black;
+        color: antiquewhite;
+      }
+    </style> -->
+
+    <style></style>
+  </head>
+  <body>
+    <!-- COMMENT indicator in HTML -->
+    <!-- BODY method for implementing CSS would be like
+    <body style='background-color: black; color:antiquewhite'>  -->
+
+    <h1>CSS Introduction</h1>
+    <h2>101 Level</h2>
+    <p>
+      The background and font color are being defined from a STYLE.CSS file
+      invoked in the HEAD with a LINK tag. These could have been produced from
+      an inline declaration in the BODY tag as well.
+    </p>
+    <h3
+      style="
+        color: rgb(96, 96, 96);
+        background-color: rgb(237, 237, 237);
+        font: 1.5em sans-serif;
+      "
+    >
+      However, this is an inline declaration in an H3 tag with selectors for bg
+      color, color, and font (family/size)
+    </h3>
+    <div class="semitransparent">
+      <h4>
+        This is an H4 which has been altered by a STYLE tag in the HEAD.
+        <br />All H4s on this page will reflect these alterations unless
+        directly overridden by their own inline STYLE declarations.
+      </h4>
+    </div>
+    <div class="semitransparent">
+      <h3>
+        Here's an example of a
+        <a href="https://podcast.1stcenturypress.com">hyperlink</a>
+      </h3>
+    </div>
+    <h2>DIV -- Inline, Block, and Inline-Block</h2>
+    <h3>
+      DIVs by default are BLOCK elements wanting to own the entire row space --
+      but they can be redefined through CSS
+    </h3>
+    <div class="subordinatePlay">
+      Forced inline DIV block -- shares line but ignores the width/height
+    </div>
+    <div class="subordinatePlay">Another forced inline DIV block</div>
+    <div class="standard">
+      Standard DIV block -- won't share but accepts a defined width/height
+    </div>
+    <div class="fairPlay">
+      Inline-block DIV -- shares and accepts width/height definitions
+    </div>
+    <div class="fairPlay">
+      Inline-block DIV -- shares and accepts width/height definitions
+    </div>
+    <div class="whitebg">
+      <h2>BOX</h2>
+      <h3>
+        We can place an image into a DIV with CSS to create a circular "frame"
+      </h3>
+      <img id="box" src="images/1CP_Sept_2021_Logo_2.png" />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+#person {
+  display: flex;
+  width: 50%;
+  border: 5px solid blue;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 2px 2px 15px black;
+}
+#alien {
+  display: flex;
+  width: 50%;
+  border: 5px solid green;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 2px 2px 15px black;
+}
+code {
+  background-color: wheat;
+}

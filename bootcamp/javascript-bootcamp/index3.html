@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript 201 - Part 1</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      ul {
+        font-weight: bold;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript 201 - Part 1</h1>
+    <h3><a href="index.html">Retun to JS 101</a></h3>
+    <h2>Clean Coding</h2>
+    <h3>
+      Professional styling of your code can be essential, especially as you work
+      with other developers. Establishing a routine for your coding format makes
+      life easier for everyone involved, starting with yourself. Extensions such
+      as Prettier aide in this formatting as far as structure but naming
+      conventions must still be learned.
+    </h3>
+    <ul>
+      <head>
+        <strong> "Standards" Across Most Professional Circles:</strong>
+      </head>
+      <li>Variable Naming: CamelCase >> let myFirstName = "Arthur";</li>
+      <li>Since CONST is immutable >> const NAME = "Arthur";</li>
+      <li>Semi-Colon Use >> Not necessary but traditional</li>
+      <li>Content in brackets usually get their own lines</li>
+    </ul>
+    <h2>Waiting For The Page To Load</h2>
+    <h3>
+      By default we place the JS Script tag at the bottom of the body, so that
+      it runs after the page has 'loaded'. However, occasionally the JS will
+      begin running (and searching for variables et al) before all the HTML has
+      been implemented/interpreted by the browser.
+    </h3>
+    <h3>
+      (This is rarely an issue unless you have 1000s of lines of HTML code in a
+      page.)
+    </h3>
+    <h3>
+      Ideally, we can control this by placing all the JS coding for the page
+      into the body of the following function within the SCRIPT tag itself:
+      <code>window.onload = function() {...}</code> which obviously keeps all
+      the JS from running until the window is loaded.
+    </h3>
+    <h2>When The Page Is Refreshed</h2>
+    <h3>
+      What about when the user has unsaved content on the page, or you want to
+      make certain the user is truly ready to leave the page? You can create a
+      similar window command line in the SCRIPT:
+      <code
+        >window.onbeforeunload = function() {console.log('Before Unload");
+        return "Are you sure you want to leave?"};</code
+      >
+      which produces a pop-up warning (in some browsers only -- errors in
+      others).
+    </h3>
+    <h2>Scope</h2>
+    <h3>
+      Variables have a limited range of recognition, meaning outer defined
+      variables will be recognized by inner nested elements, but in a more
+      limited capacity from inner to outer.
+    </h3>
+    <h3>
+      In this example, <code>num</code> will be recognized within the if
+      conditional but <code>greeting</code> would not be recognized outside the
+      if conditional:
+    </h3>
+    <h3>
+      <code
+        >const num = 1234;<br />if(num === 1234) {<br />const greeting = "Hello
+        1234";<br />};</code
+      >
+    </h3>
+    <h3>
+      The same can be said if the variables were LET instead of CONST but not
+      necessarily if they were VAR. VAR is more universal and could be
+      recognized outside the if conditional.
+    </h3>
+    <h2>Hoisting</h2>
+    <h3>
+      In JS, each block's components (its scope) are examined quickly and any
+      found variables are 'stored' with empty/undefined values, or "hoisted", to
+      the top of the block's temporary memory allocation.
+    </h3>
+    <h3>
+      Consider the following example. In the first line, 'name' would be
+      recognized as a variable but undefined (no value assigned). JS had found
+      the variable in its initial scan, hoisting its existence to the top of the
+      block in preparation for value to be assigned. Then on the second line,
+      'name' gets that value, so that in the third line, 'name' would now
+      produce 'Ford'.
+    </h3>
+    <h3>
+      <code
+        >console.log(name);<br />var name = "Ford";<br />console.log(name);</code
+      >
+    </h3>
+    <h2>Closure</h2>
+    <h3>
+      Like Scope, closure refers to the limitations of inner and outer reaching
+      recognitions. You can create a variable OUTSIDE a function (person1) and
+      then call that variable within the function, but you cannot declare a
+      variable INSIDE a function (person2) and use it outside that function.
+    </h3>
+    <h3>
+      <code
+        >let person1 = "Arthur Dent";<br />function greeting() {<br />console.log(`Hello
+        ${person1}`)<br />var person2 = "Ford";<br />}<br />greeting(); // Hello
+        Arthur Dent<br />console.log(person2, "is the second person") // error
+        message</code
+      >
+    </h3>
+    <h2>Deleting Object Properties</h2>
+    <h3>You can delete object properties but not entire variables in JS.</h3>
+    <h3>
+      <code
+        >const person4= {<br />name: 'Ford',<br />planet: 'Betelguese'<br />}<br />delete
+        person4['planet'];<br />delete person4;</code
+      >
+    </h3>
+    <h3>
+      While the first delete command WILL delete the 'planet' property, the
+      second delete command will fail (may not produce error message unless in
+      strict mode).
+    </h3>
+    <h2>MATH</h2>
+    <h3>JS contains a slew of methods for MATH.</h3>
+    <h3>
+      <ul>
+        <li>Math.round(4.6) -- rounds up/down to nearest whole number</li>
+        <li>Math.pow(8,2) -- 8 to the power of 2 (8**2=64)</li>
+        <li>Math.sqrt(9) -- square root of 9 (3)</li>
+        <li>Math.max(1, 4, 43, 10) -- finds the max number (43)</li>
+        <li>Math.min(1, 4, 43, 10) -- finds the min number (1)</li>
+        <li>Math.floor(23.9) -- takes the floor number (23)</li>
+        <li>Math.ceil(23.1) -- takes the ceiling number (24)</li>
+        <li>Math.random() -- returns a random # between 0 and 1 (decimals)</li>
+        <li>
+          Math.random() * 100 -- returns a random # between 0 and 100 (with
+          decimals)
+        </li>
+        <li>
+          Math.floor(Math.random() * 100) -- returns a random whole # between 0
+          and 100*
+        </li>
+      </ul>
+      *Yes, you can nest the properties!
+    </h3>
+    <h2>The 'THIS' Keyword</h2>
+    <h3>Notice the following code:</h3>
+    <h3>
+      <code>
+        const person5= {<br />name: 'Arthur',<br />drink: 'tea',<br />vehicle:
+        'spaceship',<br />speak() {<br />console.log(`${this.name} said, "Is
+        there any ${this.drink} on this ${this.vehicle}?"`);<br />};<br />};<br />person5.speak();
+      </code>
+    </h3>
+    <h3>
+      THIS replaces PERSON5 throughout the coding, making the SPEAK() method
+      itself generic for accepting other variables if separated into its own
+      free-standing function.
+    </h3>
+    <h2>Function Types</h2>
+    <h3>
+      Consider each of the following examples. They are really just different
+      ways of writing the same function.
+    </h3>
+    <h3>
+      Example One:<br /><code>
+        function hello() { return "Hello Arthur" }<br />const greeting =
+        hello();<br />console.log(greeting);
+      </code>
+    </h3>
+    <h3>
+      Example Two:<br />
+      <code>
+        const hello = function() { return "Hello Arthur" }<br />const greeting =
+        hello();<br />console.log(greeting);
+      </code>
+    </h3>
+    <h3>
+      Example Three:<br /><code>
+        const hello = () => { console.log('Hello Arthur') }<br />hello();
+      </code>
+    </h3>
+    <h3>
+      Example Four:<br /><code>
+        const hello = () => "Hello Arthur"<br />hello();
+      </code>
+    </h3>
+    <h3>
+      The 3rd and 4th examples are using ARROW functions.
+      <u>Note of caution</u>: arrow functions do not use the THIS keyword in the
+      same manner as other functions and methods. THIS in an arrow function is
+      considered more global in its recognition (reaches far outside the normal
+      scope) and can have unexpected results when used.
+    </h3>
+    <h3>
+      Here's one more example of an arrow function in use:<br /><code>
+        const myNewGreeting = (firstName, lastName) => {
+        <br />console.log(`Welcome, ${firstName} ${lastName}`);<br />};<br />myNewGreeting('Ford',
+        'Prefect');<br />
+      </code>
+    </h3>
+    <!-- <h2><a href="index3.html">Move on to JavaScript 201</a></h2> -->
+
+    <!-- Place SCRIPT for JS at bottom of BODY -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px;
+}
+
+code {
+  background-color: cadetblue;
+  color: antiquewhite;
+  padding: 2px;
+}
+
+h1#header {
+  display: inline-flex;
+  border-color: black;
+  border-radius: 12px;
+  color: crimson;
+  padding: 10px;
+  box-shadow: 1px 1px 10px black;
+  text-shadow: 1px 1px 5px gray;
+}
+
+h2,
+h3,
+h4 {
+  display: block;
+  color: crimson;
+  padding: 10px;
+}

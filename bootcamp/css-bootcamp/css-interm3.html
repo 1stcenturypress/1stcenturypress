@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 201 - Page 3</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .box7 {
+        width: 200px;
+        height: 100px;
+        border: 5px solid yellow;
+        margin: 30px auto;
+      }
+      .box8 {
+        width: 200px;
+        height: 100px;
+        border: 5px solid yellow;
+        margin: 30px auto;
+
+        transform: translate(100px, 100px);
+      }
+      .box9 {
+        width: 200px;
+        height: 100px;
+        border: 5px solid yellow;
+        /* margin: 30px auto; */
+
+        transform: rotate(-37deg);
+      }
+      .box10 {
+        width: 200px;
+        height: 100px;
+        border: 5px solid yellow;
+        margin: 30px auto;
+
+        transform: scale(1.5);
+      }
+      .box11 {
+        width: 200px;
+        height: 100px;
+        border: 5px solid yellow;
+        margin: 10px;
+
+        transform: skew(20deg, 20deg);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center">CSS 201: Intermediate Level CSS - Page 3</h1>
+    <h2><a href="css-intermediate.html">Return To Page 1</a></h2>
+    <h2>GRADIENT BACKGROUNDS</h2>
+    <h3>Two types of Gradients: Linear and Radial</h3>
+    <h4>
+      Linear goes from side to side and Radial emerges from the center. Linear
+      is the predominant style ad will be our focus.
+    </h4>
+    <h4>
+      The format is simply
+      <code>BACKGROUND-IMAGE: LINEAR-GRADIENT(DIRECTION, COLOR, COLOR)</code>.
+      And you can see an example here with a direction TO RIGHT of BLACK to
+      YELLOW.
+    </h4>
+    <div class="gradient"></div>
+    <h4>We can also assign it in degrees (DEG) like this one at 45DEG.</h4>
+    <div class="gradient2"></div>
+    <h4 id="pseudoHover">
+      There are several Gradient Generator sites.
+      <a href="https://cssgradient.io/" target="_blank">CSSGradient.io</a>
+      and
+      <a href="https://www.colorzilla.com/gradient-editor/" target="_blank"
+        >Colorzilla.com</a
+      >
+      produce ones like these:
+    </h4>
+    <div class="gradient3"></div>
+    <div class="gradient4"></div>
+    <h4 id="pseudoHover">
+      Of course, you can combine the effects of gradients and background into
+      layers.
+      <a href="background-example.html">See this sample page</a>
+      .
+    </h4>
+    <h2>Transformations</h2>
+    <h3>Altering elements through moving, rotating, scaling, etc.</h3>
+    <h4>We will return to our boxes for this example.</h4>
+    <div class="box7">A centered box</div>
+    <div class="box8">
+      Same but with TRANSFORM: TRANSLATE(100px, 100px); applied
+    </div>
+    <div class="box9">With TRANSFORM: ROTATE(-37deg);</div>
+    <div class="box10">
+      TRANSFORM: SCALE(1.5); (notice every item in the element scales, including
+      text-size)
+    </div>
+    <div class="box11">TRANSFORM: SKEW(20deg,20deg);</div>
+    <h2>
+      For ANIMATION ---->
+      <a href="animation.html">See Animation page</a>
+    </h2>
+    <h2>FLEXBOX ----> <a href="flexbox.html">See Flexbox Page</a></h2>
+    <h3>
+      Tables are old-school, at least when it comes to using them to layout your
+      web page. Flexbox replaces tables, as does GRID (which we cover next).
+    </h3>
+    <h2>GRID ----> <a href="grid.html">See Grid Page</a></h2>
+    <h3>
+      As great as Flexbox is over Tables, you really need to experience Grid as
+      an improvement over Flexbox, too!
+    </h3>
+    <h2><a href="css-interm2.html">Return To Page 2</a></h2>
+  </body>
+</html>

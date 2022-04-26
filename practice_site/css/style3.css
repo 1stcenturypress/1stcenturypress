@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px;
+}
+
+code {
+  background-color: cadetblue;
+  color: antiquewhite;
+  padding: 2px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: brown;
+  text-shadow: 2px 2px 5px rgb(198, 198, 198);
+}
+
+.shadowText {
+  text-shadow: 2px 2px 5px rgb(164, 164, 164);
+}
+
+#stickyHeader {
+  position: sticky;
+}

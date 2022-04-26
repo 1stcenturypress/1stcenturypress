@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <title>jQuery 101</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Start Fixed Developer Footer -->
+    <div
+      class="position-fixed p-1 m-1 rounded-pill border border-success text-body shadow bg-white bottom-0 end-0"
+    >
+      &copy; 2022 Burnt Bridges Studio
+    </div>
+    <!-- End Developer Footer -->
+
+    <h1
+      class="bg-success p-3 rounded-3 bg-opacity-50 shadow text-body text-center"
+    >
+      jQuery 101 - For Beginners
+    </h1>
+    <h2>Why jQuery?</h2>
+    <p>
+      First, jQeuery is a library and not a framework, meaning it is written
+      alongside/within JS rather than necessarily replacing it.
+    </p>
+    <p>
+      There is an argument that one does not need to learn jQuery if React.js
+      and other frameworks are used instead. However, jQuery can sometimes
+      accomplish in seconds or minutes what a framework like React.js may take
+      much longer to produce through coding.
+    </p>
+    <p>
+      Furthermore, jQuery is used on millions of websites, making it
+      professionally relevant for well-rounded developers.
+    </p>
+    <p>
+      React.js is great and efficient for larger coding/customization and
+      therefore should be learned/implemented in larger project needs. jQuery is
+      just easier to "grab and go" on some individual needs.
+    </p>
+    <h2>What is jQuery?</h2>
+    <p>
+      In their own words, jQuery is a JS library designed to implement "HTML
+      document traversal and manipulation, event handling, animation, and Ajax
+      much simpler with an easy-to-use API that works across a multitude of
+      browsers".
+    </p>
+    <h2>How to use jQuery</h2>
+    <p>
+      There are 2 methods for using jQuery: direct download of the components
+      for local implementation or through script insertion from a CDN (content
+      delivery network). Local download will require manual updates by the
+      developer and fresh installs from the user-side as well. Using a CDN has
+      the advantage of latest versions and avoids re-downloading for users who
+      have already acquired jQuery from the same CDN.
+    </p>
+    <p>
+      We will be using JSDelivr insertion straight into the HTML (near the
+      bottom of the body tag):
+    </p>
+    <code
+      >script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"</code
+    >
+    <p></p>
+    <h4>Recommendation:</h4>
+    <p>
+      As a confirmation that all the CDN scripts are actually loaded on your
+      page, consider placing the following function into a SCRIPT at the bottom
+      of the other scripts in your page body:
+    </p>
+    <code>
+      $(document).ready (function() { <br />console.log('CDN scripts are
+      loaded!')<br />
+      })</code
+    >
+    <p></p>
+    <h2 class="textChange">Original Text</h2>
+
+    <p>
+      The recommendation just shown is actually a jQuery block reflecting the
+      syntax for common jQuery commands.
+    </p>
+    <code> $(selector).event(function() {}) </code>
+    <p></p>
+    <p>If you had an H1 like this:</p>
+    <code>h1 class="customerClassName" id="customId"</code> with text that says
+    "Original"
+    <p></p>
+    <p>
+      You could call either the class or id (or even the entire H1) in a jQuery
+      command:
+    </p>
+    <code>$("H1").doSomething() ...</code><br />
+    <code>$(".customerClassName").doSomething() ...</code><br />
+    <code>$("#customId").doSomething() ...</code>
+    <p></p>
+    <p>
+      Consider the following, where the text for the H2 tag is being changed as
+      soon as the entire document has been loaded/ready:
+    </p>
+    <code
+      >$(document).ready(function() {<br />$("h2.textChange").text("jQuery
+      Syntax");<br />});</code
+    >
+    <p></p>
+    <p>
+      This coding has been applied in this section. Refresh this page and focus
+      on the title for this section ('jQuery Syntax'). You can briefly see that
+      the initial text in the H2 tag is actually "Original Text". With jQuery,
+      it is dynamically changed to "jQuery Syntax" once the document is fully
+      loaded.
+    </p>
+    <div class="bg-warning p-1 bg-gradient rounded">
+      <h4>SPECIAL NOTE:</h4>
+      <h5>
+        All jQuery scripts must be inserted into the HTML page
+        <em>below</em> the jQuery CDN script else it won't function properly.
+      </h5>
+    </div>
+    <p></p>
+    <h2>jQuery Selectors</h2>
+    <p>
+      jQuery serves its purpose within the DOM, or basically the BODY content
+      area of a page.
+    </p>
+    <p>
+      Let's build this example: an H2 title, a button, and some Lorem-filled
+      paragraphs.
+    </p>
+    <hr />
+    <h2 class="customTitle">Custom H2 Title</h2>
+    <button class="custom-class">Custom Button</button>
+    <p></p>
+    <p class="custom-class">
+      Custom paragraph with Lorem ipsum dolor sit amet consectetur, adipisicing
+      elit. Aperiam delectus obcaecati incidunt consequuntur provident autem,
+      tempore veniam amet. Tenetur voluptas distinctio impedit at, et ea eius
+      qui aliquid perspiciatis repellendus.
+    </p>
+    <p id="customId">
+      Custom paragraph with Lorem ipsum dolor sit amet consectetur, adipisicing
+      elit. Aperiam delectus obcaecati incidunt consequuntur provident autem,
+      tempore veniam amet. Tenetur voluptas distinctio impedit at, et ea eius
+      qui aliquid perspiciatis repellendus.
+    </p>
+    <hr />
+    <p></p>
+    <p>
+      Note that <code>.text</code> only accepts text while
+      <code>.html</code> accepts text/HTML tags, as does
+      <code>.prepend</code> and <code>.append</code>.
+    </p>
+    <p></p>
+    <h4>What if we need to add HTML before or after an element?</h4>
+    <p>
+      Let's create a DIV with the id "target" with the text "Add HTML before and
+      after this sentence". And using <code>.before</code> and
+      <code>.after</code> in our jQuery command, we end up with:
+    </p>
+    <div id="target">Add HTML before and after this sentence.</div>
+    <p></p>
+    <h4>What about removing/deleting elements?</h4>
+    <p>
+      Technically, performing any .text or .html commands will "override" the
+      original content, which is basically all a .remove or .empty command
+      really does. However, an intentional remove/empty can be accomplished in
+      more than one way.
+    </p>
+    <code>$("div#parent").remove()</code> <br />removes the entire parent
+    while<br />
+    <code>$("div#parent").empty()</code> <br />empties the parent of its child
+    elements and<br />
+    <code>const $parent = $("div#parent")<br />$parent.empty()</code> would
+    perform the same thing.
+    <p></p>
+    <p></p>
+      Just remember that none of these jQuery commands are actually appending,
+      prepending, deleting, emptying, and so forth any HTML code as originally
+      written. The original text, html, etc. are all still there in the code. jQuery merely modifies the content for the browser/front-end manipulation of the page. If you commented out the jQuery commands, the original content would reappear as written.
+    </p>
+    <p></p>
+    <h4>Adding Event Listeners through jQuery</h4>
+    <p>Events are all user-driven or affected elements. Buttons, form items, etc. The basic syntax for an event listener would be:</p>
+     <p></p>
+    <code>$("button").click()</code>
+    <p></p>
+    <p>Convert that to a jQuery block like this:</p>
+    <code>
+        $("button").click(function() {
+            alert("I am clicked!")
+        })
+    </code>
+    <p>And you end up with the following live example:</p>
+    <button>Click Me</button> <p></p><p id="clicked">Go ahead...click it!</p> 
+   <p></p>
+   <p>There are actually 2 other ways to produce this same click event:</p>
+   <code>$("button").on("click", function() {...})</code> (the preferred method)<br>
+   <code>$("document").on("click", "button", function() {...})</code> *
+    <p></p>
+    <span class="bg-warning p-2 text-dark rounded-pill">* Remember the third option for later when dealing with Ajax! </span>
+    <p></p>
+    <h4>Hover (MouseEnter/MouseLeave)</h4>
+    <p>Hover is less common in today's coding due to the CSS .hover being more accepted, but we will still use it here as an example of the common mouse events MouseEnter/MouseLeave (alongside Click and DblClick). Here's a simple box "rigged" with <code>mouseenter</code> and <code>mouseleave</code> commands. (Juiced it up a bit with a <code>.html</code> for FX)</p>
+    <div id="box" class="bg-primary rounded-2 text-center text-white p-2">No Mice Here</div>
+    <p></p>
+    <code>$("#box").on("mouseenter", function() {
+        console.log("Your mouse entered the box!")
+    })</code>
+    <p></p>
+    <h4>Keyboard Events</h4>
+    <p>3 common keyboard events are KeyPress, KeyDown, and KeyUp, although there are others. They function similarly to the other events so far so no examples will be shown here.</p>
+    <h4>Focus Events</h4>
+    <p>Focus is one of 4 common form events (alongside Submit, Change, and Blur). A great real world example of a focus event is when you click into a text area and your screen keyboard pops up.</p> <p>Here we add a form textarea tag as our testing ground for this section. We name it "mytextarea" with the default cols="30" rows="10":</p>
+    <textarea name="mytextarea" id="" cols="30" rows="10">Click inside here to see a FOCUS reaction...</textarea>
+    <span id="focusComments" class="align-top fw-bold">Doesn't react to a hover, only actual clicks into the text area.</span>
+    <p></p>
+    <code>        $("[name='mytextarea']").on("focus", function() {<br>
+        $("#focusComments").html("<strong>TextArea Focused On</strong>")
+    })</code>
+    <p></p>
+    <span>Note the slightly different coding structure for the selector. This just re-enforces that a selector can be more than a class, id, or element like H1.</span>
+    <p></p>
+    <h4>Blur Events</h4>
+    <p>In response to the Focus event, we need an "unfocus" which jQuery calls Blur.</p>
+    <p>We already used the Blur event above in the Focus Event section. Notice the right-hand text switches during Focus and then gets 'restored' by the Blur event (which is when we click away from the text area).</p>
+    <p>A more real world example would be the following. An INPUT box asking for a web address. Once the user tabs or clicks away, it will look for the 'http' substring, add it if missing, and update the user's input to reflect the change.</p>
+    <h6>Enter Any Web Address: 
+    <input type="text" id="blurText"> (tab or click away)</h6>
+    <p></p>
+    <h4>Form Submission Events</h4>
+    <p>There will always be a time when you will need a form. Trust me.</p>
+    <form action="">
+        <input type="text" name="formName" id="basicFormName" placeholder="Your Name">
+        <button type="submit" id="basicSubmitBtn">Submit this form</button>
+    </form>
+    <p></p>
+    <code>
+        $("form").on("submit", function(event) {
+            // event action
+        })
+    </code>
+    <p></p>
+    <h4>Hide / Show Elements</h4>
+    <p>First, we have a sample box and a button.</p>
+    <div class="d-inline-flex flex-column">
+        <div id="box1" class="bg-primary rounded-2 text-white text-center">Sample Box
+        </div>
+        <button id="clickMe" class="">Hide Sample Box</button>
+        <p></p>
+        <button id="clickMe2" class="">Show Sample Box</button>
+    </div>
+    <p></p>
+    <p>If we add an event listener to hide it on button click:</p>
+    <code>
+        $("#clickMe").on("click", function(e) {<br>
+            e.preventDefault()<br>
+            $("div#box").hide()
+        })
+    </code>
+    <p></p>
+    <p>But we can restore it with a show command:</p>
+    <code>
+        $("#clickMe2").on("click", function(e) {<br>
+            e.preventDefault()<br>
+            $("div#box").show()
+        })
+    </code>
+    <p></p>
+    <h2>Adding CSS Classes</h2>
+    <p>Through jQuery, HTML can be beautified with vanilla CSS or even libraries like Bootstrap.</p>
+    <p></p>
+    <div class="box2">HTML Box</div>
+    <button id="btnCSS">Add CSS</button>
+    <button id="btnBS">Add Bookstrap</button>
+    <button id="btnRestore">HTML</button>
+    <p></p>
+    <h6>In this example, you can switch to CSS, Bootstrap, or even restore back to default HTML (with <code>.removeClass</code>).</h6>
+    <h4>Toggle CSS</h4>
+    <p>If you simply want to toggle between two states, use the <code>.toggleClass</code> instead:</p>
+    <code>
+        $(".box").toggleClass("blue")</code>
+    <p></p>
+    <p>Could also perform with a JS block such as:</p>
+    <code>
+        const $box = $(".box");<br>$(".toggle-blue-class").on("click", () => {<br>
+            $box.toggleClass("blue")<br>
+        })
+    </code>
+    <p></p>
+    <div class="box3 blue">Sample Box</div>
+    <button class="toggleBtn">Toggle The CSS</button>
+    <p></p>
+    <h4>.CSS</h4>
+    <p>So far we have used <code>.addClass</code> to insert HTML enhancing code but like <code>.text</code> and <code>.html</code>, we can use <code>.css</code> to directly insert CSS, in at least two ways:</p>
+    <h5>Version 1</h5>
+    <code>
+        $(".box")<br>
+        .css("background-color", "blue")<br>
+        .css("border", "10px solid blue")<br>
+        .css("border-radius", "50%")
+    </code>
+    <p></p>
+    <div class="box4"></div>
+    <p></p>
+    <p>Note the slight change in structure, where the key and the value are separate parameters.</p>
+    <h5>Version 2</h5>
+    <p>Can also be coded using objects:</p>
+    <code>
+        .css({<br>
+            backgroundColor: "yellow",<br>
+            border: "10px solid blue",<br>
+            borderRadius: "10px"<br>
+        })
+    </code>
+    <p></p>
+    <div class="box5"></div>
+    <p></p>
+    <p>Note the change in naming conventions. Objects do not like hyphens so the format switches to camelCase.</p>
+    <p></p>
+    <h4>.FADE / .SLIDE</h4>
+    <p>Although rarely used, there are <code>.fadeIn()</code> and <code>.fadeOut()</code> events, where an optional time interval can be set as a parameter. </p>
+    <p>More common, however, are the <code>.slideUp()</code> and <code>.slideDown()</code> events, again with the optional time interval parameter.</p>
+    <p></p>
+    <h4>Animation</h4>
+    <p>Virtually anything consisting of numbers can be animated in jQuery. Dimensions are the most common example. Colors, however, can not be animated. Computers can't self-calculate the necessary changes between color codes.</p>
+    <div class="box" style="font-size: 18px; text-align: center;">
+        <div style="color:white">Sample Text</div>
+    </div>
+    <button id="btnAnimate">Animate Box</button>
+    <p></p>
+    <h4>.EACH Loops</h4>
+    <p>We can interate through all the elements in a particular block, altering their content with a <code>.each()</code> loop.</p>
+    <p>We start with 4 DIVs with the class ".each" and default text (and 1 DIV with no class tag).</p>
+    <div>Item 1</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+    <div>Item 4</div>
+    <div>Item 5 (not tagged with ".each")</div>
+    <p></p>
+    <p>Then we code the following:</p>
+    <code>
+        $("div.each").each(function(index, element) {<br>
+            $(element).text(`${index+1}. New Item`)<br>
+            if(index==0) {<br>
+                $(element)<br>
+                .css("background-color", "black")<br>
+                .css("color", "white")<br>
+            } else if(index==1) {<br>
+                $(element)<br>
+                .css("background-color", "green")<br>
+                .css("color", "white")<br>
+            } else if(index==2) {<br>
+                $(element)<br>
+                .css("background-color", "yellow")<br>
+                .css("color", "black")<br>
+            } else {<br>
+                $(element)<br>
+                .css("background-color", "white")<br>
+                .css("color", "black")<br>
+            }<br>
+        })
+    </code>
+    <p></p>
+    <p>And end up with:</p>
+    <div class="each">Item 1</div>
+    <div class="each">Item 2</div>
+    <div class="each">Item 3</div>
+    <div class="each">Item 4</div>
+    <div>Item 5 (not tagged with ".each")</div>
+    <p></p>
+    <p>You could alter multiple elements under special conditions, using a loop. Although a simple example here, consider this: using jQuery, you could append at one stage additional elements into a page, sharing an id/class, and then loop through conditional alterations of those elements at another stage. True dynamic page development.</p>
+    <p>Another example: Having every H2 on a page prepended with a custom bullet or icon based on a condition selected by the user.</p>
+    <p></p>
+    <h4>Changing Element Atrributes</h4>
+    <p>We can change an element, say from a text input field to a password input field.</p>
+    Original: <code> input type="text" </code><br> 
+    <input type="text">
+    <p></p>
+    New: <code>$("input").attr("type", "password")</code><br>
+    <input type="password">
+    <p></p>
+    <h2>Ajax</h2>
+    <p>For our last section of this mini camp, we cover the GET and POST requests for Ajax.</p>
+    <p>We can grab Star Wars character data from swapi.com in the form of a JSON file by invoking the following Ajax .get():</p>
+    <code>
+        $.get(`https://swapi.dev/api/people/4`, function(data) {<br>
+            $("div.swapi").append(`${data.name} | Height: ${data.height} | Mass: ${data.mass}`)<br>
+        })
+    </code>
+    <p></p>
+    <div class="swapi p-1 text-white bg-primary">Character: </div>
+    <p></p>
+    <p>Notice that there is no selector required for a .get command because you are retrieving data from a remote location, usually to be manipulated afterwards, like we did with the DIV above displaying the name, height, and mass of the character.</p>
+    <p></p>
+    <p>POST functions in a very smiliar fashion, sending the data to an external location.</p>
+    <code>
+        $.post(url, data, function(data) {}</code> usually with 2 parameters (key, value).
+    <p>We will cover Ajax thoroughly in its own mini camp.</p>
+    <p></p>
+    <hr>
+    <!-- jQuery scripts Start -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script> 
+
+    <script>
+      $(document).ready(function () {
+        //   Text Replacement
+        $("h2.textChange").text("jQuery Syntax");
+        $(".customTitle").text("New Custom Title");
+        // HTML Replacement
+        $("button.custom-class").html(
+          "<em>New Italicized HTML Button Label</em>"
+        );
+        // Text/HTML Addition Before / After
+        $("p.custom-class").prepend(
+          "<strong>Bold Prepended Text using <code>.prepend</code>.</strong>"
+        );
+        $("#customId").append(
+          "<strong>Bold Appended Text using <code>.append</code>.</strong>"
+        );
+        $("div#target")
+          .before("New text before using <code>.before</code>")
+          .after("New text after using <code>.after</code>");
+      });
+    </script>
+
+    <script>
+        // The Click Me button
+        $("button").on("click", function() {
+            $("#clicked").html("You did it!")
+        })
+        // The Hover section
+        $("#box").on("mouseenter", function() {
+            $("#box").html("You Have A Mouse")
+        }).on("mouseleave", function() {
+            $("#box").html("No Mice Here")
+        })
+        // Focus / Blur Events
+        $("[name='mytextarea']").on("focus", function() {
+            $("#focusComments").html("<strong>TextArea Focused On</strong>")
+        }).on("blur", function() {
+            $("#focusComments").html("Doesn't react to a hover, only actual clicks into the text area.")
+        })
+        $("input#blurText").on("blur", function() {
+            let websiteUrl = $(this).val()
+            if(websiteUrl.substr(0,4) !== "http") {
+                websiteUrl = `http://${websiteUrl}`
+            }
+            $(this).val( websiteUrl )
+        })
+        // Form Submission
+        $("form").on("submit", function(event) {
+            event.preventDefault()
+        })
+        // Hide / Show Events
+        $("#clickMe").on("click", function(e) {
+            e.preventDefault()
+            $("div#box1").hide()
+            $("#clickMe").text("Now Click The Show Button")
+        })
+        $("#clickMe2").on("click", function(e) {
+            e.preventDefault()
+            $("div#box1").show()
+            $("#clickMe").text("Hide Sample Box")
+        })
+        // Added CSS / Bootstrap / Remove
+        $("#btnCSS").on("click", function(e) {
+            $(".box2").addClass("blue dimens-50")
+            .removeClass("bg-success border border-dark rounded-pill shadow w-50 h-50").text("CSS Added")
+        })
+        $("#btnBS").on("click", function(e) {
+            $(".box2").addClass("bg-success border border-dark rounded-pill shadow w-50 h-50").removeClass("blue dimens-50").text("Bootstrap Added")
+        })
+        $("#btnRestore").on("click", function(e) {
+            $(".box2").removeClass("blue dimens-50").removeClass("bg-success border border-dark rounded-pill shadow w-50 h-50").text("HTML Box")
+        })
+        // Toggle CSS
+        const $box3 = $(".box3")
+        $(".toggleBtn").on("click", () => {
+            $box3.toggleClass("blue")
+        })
+        // .CSS
+        $(".box4")
+        .css("background-color", "orange")
+        .css("border", "10px solid black")
+        .css("border-radius", "50%")
+        // ...or version 2
+        $(".box5").css({
+            backgroundColor: "yellow",
+            border: "10px solid blue",
+            borderRadius: "10px"
+        })
+        // Animate 
+        $("#btnAnimate").on("click", function() {
+            $(".box").animate({
+                // opacity: 0.75,
+                width: "400px",
+                fontSize: "64px",
+                borderRadius: "50px",
+                margin: "20px"
+            }, 2000)
+        })
+        // .EACH Loop
+        $("div.each").each(function(index, element) {
+            $(element).text(`${index+1}. New Item`)
+            if(index==0) {
+                $(element)
+                .css("background-color", "black")
+                .css("color", "white")
+            } else if(index==1) {
+                $(element)
+                .css("background-color", "green")
+                .css("color", "white")
+            } else if(index==2) {
+                $(element)
+                .css("background-color", "yellow")
+                .css("color", "black")
+            } else {
+                $(element)
+                .css("background-color", "white")
+                .css("color", "black")
+            }
+        })
+        // Ajax GET
+        $.get(`https://swapi.dev/api/people/4`, function(data) {
+            $("div.swapi").append(`${data.name} | Height: ${data.height} | Mass: ${data.mass} | Birth: ${data.birth_year} (Before Battle of Yavin)`)
+        })
+      </script>
+
+    <!-- jQuery scripts End -->
+    <!-- Bootstrap JS scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Confirmation that all scripts are loaded -->
+    <script>
+      $(document).ready(function () {
+        console.log("CDN scripts are loaded!");
+      });
+    </script>
+    <!-- External JS script -->
+    <style src="js/script.js"></style>
+  </body>
+</html>
