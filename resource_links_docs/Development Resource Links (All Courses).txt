@@ -1,0 +1,55 @@
+Resource Links
+
+## TERMINAL
+Windows Command Prompt Cheatsheet
+http://www.cs.columbia.edu/~sedwards/classes/2015/1102-fall/Command%20Prompt%20Cheatsheet.pdf
+
+## HTML
+HTML Element Reference
+https://www.w3schools.com/tags/default.asp
+
+HTML Markup MDN Docs
+https://developer.mozilla.org/en-US/docs/Web/HTML
+
+## CSS
+CSS Reference
+https://www.w3schools.com/cssref/
+https://developer.mozilla.org/en-US/docs/Web/CSS
+
+## JavaScript
+JavaScript and HTML DOM Reference
+https://www.w3schools.com/JSREF/DEFAULT.ASP
+
+JavaScript MDN Docs
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+Eloquent JavaScript 3rd Edition (online book)
+https://eloquentjavascript.net/
+
+## Frameworks and Libraries
+Bootstrap 5 Tutorial
+https://www.w3schools.com/bootstrap5/index.php
+
+jQuery Event Methods
+https://www.w3schools.com/jquery/jquery_events.asp
+
+jQuery API
+https://api.jquery.com/
+
+RESTful API Cheatsheet
+https://devhints.io/rest-api
+
+## React-Related
+React.js Tutorial
+https://reactjs.org/tutorial/tutorial.html
+
+React JS for Beginners (Oak Academy)
+https://github.com/OakAcademy/React-JS-for-beginners
+
+Context Hooks (Oak Academy)
+https://github.com/OakAcademy/Context-Hooks
+
+Angular Projects Codes (Oak Academy)
+https://github.com/OakAcademy/Angular-Projects-Codes
+
+
